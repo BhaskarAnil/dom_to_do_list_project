@@ -1,17 +1,17 @@
 // function to update storage for every event
-function upadteStorage() {
+function updateStorage() {
   let list = document.getElementById("list");
   let itemDivs = Array.from(list.children);
-  itemsDataList = [];
+  let itemsDataList = [];
   itemDivs.forEach((item) => {
-    itemData = new Object();
+    let itemData = new Object();
     itemData.content = item.querySelector("#item-content").textContent;
     itemData.progress = item.querySelector("#item-done").checked;
     itemsDataList.push(itemData);
   });
   localStorage.toDoList = JSON.stringify(itemsDataList);
 }
-// funcion to check task progress and update to do list
+// function to check task progress and update to do list
 function checkTaskProgress(element, progress) {
   let itemContent = element.querySelector("#item-content");
   if (progress) {
@@ -59,15 +59,15 @@ function modify(element) {
     let moveDownMe = element.querySelector("#down");
     deleteMe.addEventListener("click", () => {
       deleteItem(element); // calling deleteItem function
-      upadteStorage(); // update to do list after deletion
+      updateStorage(); // update to do list after deletion
     });
     moveUpMe.addEventListener("click", () => {
       moveUpItem(element); // calling moveUpItem function
-      upadteStorage(); // update to do list after changing position
+      updateStorage(); // update to do list after changing position
     });
     moveDownMe.addEventListener("click", () => {
       moveDownItem(element); // calling moveDownItem function
-      upadteStorage(); // update to do list after changing position
+      updateStorage(); // update to do list after changing position
     });
   }
 }
@@ -75,7 +75,7 @@ function modify(element) {
 function addItem(text, progress) {
   let item = document.getElementById("item");
   if (text === "") {
-    return alert("unable to add empty item");
+    return alert("Unable to add an empty item.");
   }
   document.getElementById("item-content").textContent = text;
   item.style.display = "flex";
@@ -86,17 +86,17 @@ function addItem(text, progress) {
   let modifyMe = copy.querySelector("#modify");
   modifyMe.addEventListener("click", () => {
     modify(copy);
-    upadteStorage();
+    updateStorage();
   });
   if (progress) {
     checkTaskProgress(copy, progress);
-    copy.querySelector("#item-done").checked = "true";
+    copy.querySelector("#item-done").checked = true;
   }
   let taskDone = copy.querySelector("#item-done");
   taskDone.addEventListener("change", () => {
     let progress = copy.querySelector("#item-done").checked;
     checkTaskProgress(copy, progress); // calling checkTaskProgress function when user click's checkbox
-    upadteStorage();
+    updateStorage();
   });
   text.value = "";
 }
@@ -104,7 +104,7 @@ document.getElementById("add").addEventListener("click", () => {
   let text = document.querySelector("input").value;
   document.querySelector("input").value = "";
   addItem(text, false); // calling addItem function when user clicks add button
-  upadteStorage();
+  updateStorage();
 });
 document.getElementById("clear").addEventListener("click", () => {
   localStorage.clear(); // clear the local storage by clicking the clear button
@@ -119,7 +119,7 @@ if (!localStorage.toDoList) {
     let text = item.content;
     let progress = item.progress;
     if (text) {
-      addItem(text, progress); // update the list div with local storage data when user refresh the page
+      addItem(text, progress); // update the list div with local storage data when the user refreshes the page
     }
   });
 }
