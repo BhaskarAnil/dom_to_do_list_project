@@ -1,0 +1,103 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+background-color: rgb(202, 198, 198);
+}
+header{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  position: fixed;
+  width: 100%;
+}
+.container{
+  padding: 3vh;
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.add-item{
+  display: flex;
+  position: sticky;
+  top: 10px;
+  justify-content: center;
+  width: 100%;
+}
+.add-item input {
+width: 80vw;
+ height: 30px;
+ font-size: 1.2rem;
+ padding: 1%;
+}
+button{
+  background-color: rgb(143, 139, 136);
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1%;
+  text-align: center;
+  align-items: center;
+  border: 1px solid ;
+}
+#list-head{
+display: flex;
+width: 100%;
+padding: 2%;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+#clear{
+  border-radius: 40px;
+  font-size: 1.5rem;
+  padding: 13px;
+}
+.list-items{
+  width: 100%;
+  padding: 1%;
+}
+.item-container{
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+#item-done{
+  min-height: 15px;
+  min-width: 15px;
+  margin-right: 5px;
+}
+.item{
+  display: none;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  padding: 1%;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.modify{
+  max-height: fit-content;
+  align-self: center;
+}
+.item-options{
+  display: none;
+  justify-content: flex-end;
+  z-index: 1;
+  width: 70%;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+i{
+  margin-right: 20px;
+  background-color: rgb(143, 139, 136);
+  padding: 2%;
+}
+
+

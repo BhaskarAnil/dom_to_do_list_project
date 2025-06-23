@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+    <section class="container">
+      <div class="add-item">
+        <input id="input" placeholder="Write your activity to be done" required />
+        <button class="add" id="add">Add</button>
+      </div>
+      <div id="list-head">
+        <h1>Activities To Do</h1>
+        <button id="clear" >Clear All</button>
+      </div>
+      <div class="list-items" id="list">
+        <div class="item" id="item">
+          <div class="item-container" id="item-container">
+            <input id="item-done" type="checkbox" />
+            <div class="item-content" id="item-content">nn</div>
+          </div>
+          <div class="item-options" id="item-options">
+            <i class="fa-solid fa-arrow-up" id="up"></i>
+            <i class="fa-solid fa-arrow-down" id="down"></i>
+            <i class="fa-solid fa-trash" id="delete"></i>
+          </div>
+          <button class="modify" id="modify">☰</button>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
