@@ -1,9 +1,11 @@
 # DOM To-Do List Project
 
-This project is a beginner-friendly To-Do List app focused on learning and practicing DOM manipulation with JavaScript. Users can add, mark, remove tasks, reaggrange the tasks  directly from the browser, making it a practical exercise for front-end development skills.
+This project is a beginner-friendly To-Do List app focused on learning and practicing DOM manipulation with JavaScript. Users can add, mark, remove tasks, reaggrange the tasks directly from the browser, making it a practical exercise for front-end development skills.
 
 ## File Structure
+
 The repository contains the following files:
+
 ```
 dom_to_do_list_project/
 ├── index.html      # Main HTML file
@@ -23,6 +25,7 @@ git clone https://github.com/BhaskarAnil/dom_to_do_list_project.git
 cd dom_to_do_list_project
 
 ```
+
 ## Open the Application
 
 Open index.html in your preferred web browser.
@@ -38,5 +41,3 @@ No build tools or dependencies are required; everything runs in the browser.
     - Enhance Functionality: Edit index.js to add features (e.g., task editing, local storage, filters).
 
 After making changes, simply refresh your browser to see the updates.
-
-

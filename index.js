@@ -107,8 +107,10 @@ document.getElementById("add").addEventListener("click", () => {
   updateStorage();
 });
 document.getElementById("clear").addEventListener("click", () => {
-  localStorage.clear(); // clear the local storage by clicking the clear button
-  location.reload();
+  if (confirm("Delete all tasks ?")) {
+    localStorage.clear(); // clear the local storage by clicking the clear button
+    location.reload();
+  }
 });
 // local storage
 if (!localStorage.toDoList) {
